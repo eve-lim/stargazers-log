@@ -1,3 +1,9 @@
+# Each part of the workflow has a job to do:
+# on tells GitHub Actions to run the workflow on every push to main.
+# permissions grant the workflow the access it needs to publish to GitHub Pages.
+# environment connects the job to your GitHub Pages site and exposes the published URL as ${{ steps.deployment.outputs.page_url }}.
+# steps check out your code, prepare GitHub Pages, upload your files as an artifact, and deploy them to your live site.
+
 name: Deploy to GitHub Pages
 
 on:
